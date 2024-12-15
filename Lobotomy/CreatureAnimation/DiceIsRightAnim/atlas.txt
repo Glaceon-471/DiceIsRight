@@ -1,0 +1,83 @@
+
+DiceIsRight.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+d10_0
+  rotate: false
+  xy: 222, 219
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_6
+  rotate: false
+  xy: 443, 1
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_9
+  rotate: false
+  xy: 1, 437
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_question
+  rotate: false
+  xy: 664, 219
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_7
+  rotate: false
+  xy: 1, 219
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_4
+  rotate: false
+  xy: 222, 1
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_2
+  rotate: false
+  xy: 443, 219
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_1
+  rotate: false
+  xy: 664, 1
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_8
+  rotate: false
+  xy: 222, 437
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_5
+  rotate: false
+  xy: 1, 1
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1
+d10_3
+  rotate: false
+  xy: 1, 655
+  size: 219, 216
+  orig: 219, 216
+  offset: 0, 0
+  index: -1

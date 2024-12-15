@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<equipment_list>
+  <equipment id="201981" type="weapon"> 
+    <name>DiceIsRight_weapon_name</name>
+    <desc>DiceIsRight_weapon_desc</desc>
+    <specialDesc>DiceIsRight_weapon_specialDesc</specialDesc>
+
+    <weaponClassType>special</weaponClassType>
+    <specialWeaponAnim>BlueStarWeapon_DiceIsRightWeapon</specialWeaponAnim>
+    <sprite>Dice</sprite>
+    <script>DiceIsRightWeapon</script>
+
+    <require type="level">3</require>
+    <require type="R">4</require>
+
+    <animation>Attack_1</animation>
+    <animation>Attack_2</animation>
+    <animation>Attack_3</animation>
+    <animation>Attack_4</animation>
+    <animation>Attack_5</animation>
+    <animation>Attack_6</animation>
+    <animation>Attack_7</animation>
+    <animation>Attack_8</animation>
+    <animation>Attack_9</animation>
+    <animation>Attack_0</animation>
+
+    <damage type="B" min="1" max="5">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="2" max="6">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="3" max="7">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="4" max="8">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="5" max="9">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="6" max="10">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="7" max="10">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="8" max="10">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="9" max="10">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <damage type="B" min="10" max="10">
+      <soundInfo type="damage">Weapons/blueStar</soundInfo>
+      
+      <effectInfo type="damage">
+        <src>BlueStarWeaponEffect</src>
+        <pos>
+          <x>0</x>
+          <y>1</y>
+        </pos>
+        <rot>0</rot>
+        <lifetime>0.48</lifetime>
+        <unscaled>false</unscaled>
+        <attach>victim</attach>
+      </effectInfo>
+    </damage>
+
+    <range>10</range>
+    <maxNum>2</maxNum>
+    <!--dummy For UI-->
+    <attackSpeed>1.5</attackSpeed>
+    <grade>3</grade>
+  </equipment>
+</equipment_list>

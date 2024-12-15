@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<localize>
+  <text id="DiceIsRight_weapon_name">ダイス</text>
+  <text id="DiceIsRight_weapon_desc">ダイスは全てを決める&#13;&#10;ダメージもこの世の理も....</text>
+  <text id="DiceIsRight_weapon_specialDesc">攻撃時にダイスの目がランダムに変わる&#13;&#10;ダイスの目に合わせてダメージが変わる</text>
+</localize>

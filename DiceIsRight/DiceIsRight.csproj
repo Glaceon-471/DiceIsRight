@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net4.7.2</TargetFramework>
+		<Version>1.0.0</Version>
+		<Description>Dice is Reight</Description>
+		<Authors>Glaceon-471</Authors>
+		<LobotomyCorp Condition=" '$(LobotomyCorp)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\LobotomyCorp</LobotomyCorp>
+		<langVersion>preview</langVersion>
+		<IncludeSourceRevisionInInformationalVersion>false</IncludeSourceRevisionInInformationalVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<DefineConstants>$(DefineConstants);STEAM</DefineConstants>
+		<AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+		<ApplicationIcon />
+		<Win32Resource />
+		<AssemblyName>Dice is Right</AssemblyName>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="$(LobotomyCorp)/LobotomyCorp_Data/Managed/*.dll" />
+	</ItemGroup>
+
+	<Target Name="CopyCustomContent" AfterTargets="AfterBuild">
+		<Message Text="Second occurrence" />
+		<Copy SourceFiles="$(ProjectDir)bin\$(Configuration)\net4.7.2\Dice is Right.dll" DestinationFolder="$(ProjectDir)\..\Lobotomy\" />
+	</Target>
+</Project>
