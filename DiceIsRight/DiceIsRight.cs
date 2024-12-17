@@ -1,9 +1,6 @@
 ﻿using Spine;
 using Spine.Unity;
-using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
-using AnimationState = Spine.AnimationState;
 
 namespace DiceIsRight;
 
@@ -15,8 +12,8 @@ public class DiceIsRightScript : CreatureBase
     public override void OnViewInit(CreatureUnit unit)
     {
         base.OnViewInit(unit);
-        this.Anim = (DiceIsRightAnim)unit.animTarget;
-        this.Anim.SetScript(this);
+        Anim = (DiceIsRightAnim)unit.animTarget;
+        Anim.SetScript(this);
     }
 
     public override void OnEnterRoom(UseSkill skill)
@@ -24,7 +21,7 @@ public class DiceIsRightScript : CreatureBase
         base.OnEnterRoom(skill);
         if (EquipmentTypeInfo.GetLcId(skill.agent.Equipment.weapon.metaInfo) == 201981)
             return;
-        this.LastUseSkill = skill;
+        LastUseSkill = skill;
         Anim.RollAnim();
     }
 
@@ -196,54 +193,50 @@ public class DiceIsRightAnim : CreatureAnimScript
 
     public void SetScript(DiceIsRightScript script)
     {
-        this.Script = script;
-        this.Animator = base.GetComponent<SkeletonAnimation>();
-        this.DefaultAnim();
+        Script = script;
+        Animator = GetComponent<SkeletonAnimation>();
+        DefaultAnim();
     }
 
     public void DefaultAnim()
     {
-        AnimationState state = this.Animator.AnimationState;
+        AnimationState state = Animator.AnimationState;
         state.SetAnimation(0, "default", true);
         state.SetAnimation(1, "rotate", true);
     }
 
     public void RollAnim()
     {
-        AnimationState state = this.Animator.AnimationState;
+        AnimationState state = Animator.AnimationState;
         state.GetCurrent(0).Complete += delegate (TrackEntry entry1)
         {
             state.SetAnimation(0, "default", false).Complete += delegate (TrackEntry entry2)
             {
                 DefaultAnim();
             };
-            state.SetAnimation(1, "roll", false);
-            StartCoroutine(RollAnimEnumerator());
+            state.SetAnimation(1, "roll", false).Event += delegate (TrackEntry entry2, Event e)
+            {
+                switch (e.Data.Name)
+                {
+                    case "dice_roll":
+                        DiceIsRightHelper.D100(out int tens1, out int ones1);
+                        SetDiceValue(tens1, ones1);
+                        break;
+                    case "run_effect":
+                        int value = DiceIsRightHelper.D100(out int tens2, out int ones2);
+                        SetDiceValue(tens2, ones2);
+                        Script.RollEffect(Script.LastUseSkill, value);
+                        break;
+                }
+            };
         };
     }
 
     public void SetDiceValue(int tens_place, int ones_place)
     {
-        AnimationState state = this.Animator.AnimationState;
+        AnimationState state = Animator.AnimationState;
         state.SetAnimation(2, $"d100_{tens_place}0", true);
         state.SetAnimation(3, $"d100_{ones_place}", true);
-    }
-
-    private IEnumerator RollAnimEnumerator()
-    {
-        const float time = 3 / 60f;
-        for (int i = 1; i <= 40; i++)
-        {
-            int value = Helper.D100(out int tens, out int ones);
-            SetDiceValue(tens, ones);
-            if (i == 40)
-            {
-                Script.RollEffect(Script.LastUseSkill, value);
-                yield break;
-            }
-            for (float j = 0; j < time; j += Time.deltaTime)
-                yield return null;
-        }
     }
 }
 
@@ -253,7 +246,7 @@ public class DiceIsRightWeapon : EquipmentScriptBase
     {
         base.OnAttackStart(actor, target);
         List<DamageInfo> list = [];
-        int value = Helper.RandomInt(1, 10);
+        int value = DiceIsRightHelper.RandomInt(1, 10);
         for (int i = 0; i < value; i++) list.Add(base.model.metaInfo.damageInfos[i].Copy());
         return new(model.metaInfo.animationNames[value - 1], [.. list]);
     }

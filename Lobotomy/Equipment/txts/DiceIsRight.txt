@@ -7,7 +7,7 @@
 
     <weaponClassType>special</weaponClassType>
     <specialWeaponAnim>BlueStarWeapon_DiceIsRightWeapon</specialWeaponAnim>
-    <sprite>Dice</sprite>
+    <sprite>Censored_Dice</sprite>
     <script>DiceIsRightWeapon</script>
 
     <require type="level">3</require>

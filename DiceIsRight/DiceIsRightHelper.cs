@@ -2,7 +2,7 @@
 
 namespace DiceIsRight;
 
-public static class Helper
+public static class DiceIsRightHelper
 {
     public static int RandomInt(int min, int max) => Random.Range(min, max + 1);
     
