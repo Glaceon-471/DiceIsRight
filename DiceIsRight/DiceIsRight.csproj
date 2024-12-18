@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net4.7.2</TargetFramework>
-		<Version>1.0.1</Version>
+		<Version>1.1.0</Version>
 		<Description>Dice is Reight</Description>
 		<Authors>Glaceon-471</Authors>
 		<LobotomyCorp Condition=" '$(LobotomyCorp)' == '' ">C:\Program Files (x86)\Steam\steamapps\common\LobotomyCorp</LobotomyCorp>

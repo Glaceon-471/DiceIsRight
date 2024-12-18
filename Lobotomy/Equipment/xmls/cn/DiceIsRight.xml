@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<localize>
+  <text id="DiceIsRight_weapon_name">骰子</text>
+  <text id="DiceIsRight_weapon_desc">骰子会决定一切。&#13;&#10;伤害也好，世界运转的规则也好...</text>
+  <text id="DiceIsRight_weapon_specialDesc">持有者进行攻击时，骰子的点数会随机改变。&#13;&#10;根据骰子的点数，造成的伤害也会有所变化。</text>
+</localize>
