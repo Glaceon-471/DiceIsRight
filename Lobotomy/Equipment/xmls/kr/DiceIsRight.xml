@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<localize>
+  <text id="DiceIsRight_weapon_name">주사위</text>
+  <text id="DiceIsRight_weapon_desc">주사위는 단순한 숫자에서부터 시작해서 세상의 이치를 결정짓는다.</text>
+  <text id="DiceIsRight_weapon_specialDesc">공격 시 주사위의 눈이 무작위로 바뀜. 주사위의 눈에 따라서 공격력이 변함.</text>
+</localize>

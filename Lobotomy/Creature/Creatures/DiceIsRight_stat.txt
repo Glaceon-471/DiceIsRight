@@ -34,7 +34,7 @@
     </workProb>
     <qliphoth>0</qliphoth>
     <workCooltime>10</workCooltime>
-	  <escapeable>false</escapeable>
+    <escapeable>false</escapeable>
     <hp>800</hp>
     <speed>0</speed>
     <feelingStateCubeBounds>
